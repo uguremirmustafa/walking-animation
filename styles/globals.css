@@ -1,16 +1,26 @@
-html,
-body {
+* {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+.wrapper {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: #222;
 }
-
-* {
-  box-sizing: border-box;
+.adam {
+  background-image: url('/img.png');
+  background-size: cover;
+  background-position-y: 0px;
+  width: 225px;
+  height: 475px;
+  animation: walk-east 0.8s steps(8) infinite;
+}
+@keyframes walk-east {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -1800px;
+  }
 }
